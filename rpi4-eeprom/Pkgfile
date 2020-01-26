@@ -1,0 +1,31 @@
+# Description: Raspberry Pi 4 boot EEPROM updater
+# URL: https://github.com/raspberrypi/rpi-eeprom
+# Maintainer: Tim Biermann, tbier at posteo dot de
+# Depends on: rpi4-userland
+
+name=rpi4-eeprom
+version=20200117
+commit=0d7673bbb45de591de0f0ffa71eba2f75c0e50ea
+release=1
+source=(https://github.com/raspberrypi/rpi-eeprom/archive/$commit/$name-$version.tar.gz
+  # stolen from ArchARM - thank you
+  rpi-eeprom-update.patch)
+
+build() {
+  cd rpi-eeprom-$commit
+  install -d -m 755 $PKG/usr/bin
+  install -D -m 755 firmware/vl805 $PKG/usr/bin/vl805
+  install -D -m 755 rpi-eeprom-config $PKG/usr/bin/rpi-eeprom-config
+
+  # Patch /opt/vc/bin into PATH in script due to weird install location of raspberrypi-firmware
+  install -D -m 755 rpi-eeprom-update $PKG/usr/bin/rpi-eeprom-update
+  patch $PKG/usr/bin/rpi-eeprom-update $SRC/rpi-eeprom-update.patch
+
+  # Copy all the firmware and files to the right place
+  install -d -m 755 $PKG/lib/firmware/raspberrypi/bootloader
+  cp -a firmware/* $PKG/lib/firmware/raspberrypi/bootloader
+
+  # Copy the override in place
+  install -d -m 755 $PKG/etc/default
+  install -D -m 644 rpi-eeprom-update-default $PKG/etc/default/rpi-eeprom-update
+}
