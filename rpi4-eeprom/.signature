@@ -1,6 +1,0 @@
-untrusted comment: verify with /etc/ports/raspberrypi4-arm.pub
-RWTV8P04Wo/3f3DmPyQ8SUaU/tc0Dcch2GTD8twSslN7KOtY85uKm7+yqjWNJdCSYk9ObcCzg0Zzh/i6JvgWjqlVq3V9yD12JwU=
-SHA256 (Pkgfile) = 97eb454c3fb64515ecfc0b6131ac83eb8e971562bd374c35669dea508daac906
-SHA256 (.footprint) = ac2d0a0b9b36029279a5b2f03bfcea5a7cd33e01d4a6a7d4ea5078831313f52e
-SHA256 (rpi4-eeprom-20200117.tar.gz) = f725ce4caa8da7de1cd9dc3e24e159429c1f2b301c556b3b8d19799fd730b67b
-SHA256 (rpi-eeprom-update.patch) = d716ef30c4a486019a4778579305a84c0f31593d5840850aefa9742dc6f9760f
