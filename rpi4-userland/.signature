@@ -1,0 +1,5 @@
+untrusted comment: verify with /etc/ports/raspberrypi4-arm.pub
+RWTV8P04Wo/3fxCOPbgldMg3Z8hWsgau6FNf57+44W24741mbCqi6QVQmtfMMC1K8W2lsmHYK4sl9dSJjPjNvT/OgZefQK2fRwY=
+SHA256 (Pkgfile) = b380663b92f6e0b85f8672fb4889cffae33fb0c42307a02d2c16d612acbab4b8
+SHA256 (.footprint) = 0d9e89c63f23fb76290fc1d6f0d4bc87f21de32584a073d1a9a76f05ce0a6ad7
+SHA256 (rpi4-userland-20191218.tar.gz) = cf4dff40a2f4ec38bc7e42a80b989df1bf88e12d714f7e681f83c4e5a588f5c9

@@ -1,0 +1,7 @@
+untrusted comment: verify with /etc/ports/raspberrypi4-arm.pub
+RWTV8P04Wo/3fwqHcj9wlPwTp+lnXRDJcEV5fcoHIE+XwRhg3goFDJ4dbRDGb17O6zwPjyfZkaayyBfXeQnBEJGLTzllZ9vbAQE=
+SHA256 (Pkgfile) = 42271f2c425b57c717af7fffdf5340a2ad497825ab388b661be3147e9262910c
+SHA256 (.footprint) = 9a36be18f29307db9bfad99ab7bd2fd07b8342b935406bc89b7bde8f804292b6
+SHA256 (prt-get-5.19.3.tar.xz) = 4d2e3071cc32a569c286aa517f52bfec2e3d826171cdbeb1e4694d99a2e73c01
+SHA256 (prt-get.conf) = 305b903ed8e4a88fd8556a75493e4c374c437b89bdebec8616c8de85f4ee0811
+SHA256 (prt-get.aliases) = df473d38e59d1d6cd859d986a5d6586fdc54bfd51663313c63a939e941984b7b

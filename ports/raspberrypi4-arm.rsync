@@ -1,0 +1,3 @@
+host=crux-arm.nu
+collection=ports/crux-3.5/raspberrypi4-arm/
+destination=/usr/ports/raspberrypi4-arm

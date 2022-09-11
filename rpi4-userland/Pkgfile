@@ -1,0 +1,31 @@
+# Description: Source code for ARM side libraries for interfacing to Raspberry Pi GPU.
+# URL: https://github.com/raspberrypi/userland
+# Maintainer: Tim Biermann, tbier at posteo dot de
+# Depends on: cmake
+
+name=rpi4-userland
+version=20191218
+release=1
+commit=06bc6daa02137ca72b7a2104afad81e82a44de17
+source=(https://github.com/raspberrypi/userland/archive/$commit/$name-$version.tar.gz)
+
+build() {
+  ## check if we want to build for aarch64 or armv7l
+  ## default to 32bit version
+  _64=OFF
+  [[ $(uname -m) == aarch64 ]] && _64=ON
+
+  mkdir build
+  cd build
+    cmake -DCMAKE_BUILD_TYPE=Release \
+    -DARM64=${_64} \
+    ../userland-$commit
+
+  make
+  make DESTDIR=$PKG install
+
+  find $PKG \(\
+    -iname "*readme*" \
+    -o -iname "*license*" \
+    \) -exec rm -fr '{}' \+
+}
